@@ -37,11 +37,18 @@
 
     const x = 50;
     const y = 60;
-    const width = 100;
-    const height = 75;
-    const color = 'blue';
+    const width = 140;
+    const height = 100;
+    const color = 'purple'
 
     // Add your code here
+    function drawRectangle(x, y, w, h, color) {
+      ctx.beginPath();
+      ctx.fillStyle = color;
+      ctx.fillRect(x,y,w,h);
+    }
+
+    drawRectangle (x, y, width, height, color);
 
     // Don't edit the code below here!
 

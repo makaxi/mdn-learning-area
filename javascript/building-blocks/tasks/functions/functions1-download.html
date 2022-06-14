@@ -21,7 +21,6 @@
     <section class="preview">
 
 
-
     </section>
 
   </body>
@@ -30,6 +29,13 @@
     const para = document.createElement('p');
 
     // Add your code here
+    function chooseName(arr) {
+      return Math.floor(Math.random() * arr.length);
+    }
+    
+    let randomIndex = chooseName(names);
+    para.textContent += `${names[randomIndex]}`;
+
 
     // Don't edit the code below here!
 
