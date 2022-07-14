@@ -37,10 +37,25 @@
       { name : 'Mustafa', number : '6888' },
       { name : 'Tina', number : '4312' },
       { name : 'Bert', number : '7780' },
-      { name : 'Jada', number : '2282' },
+     { name : 'Jada', number : '2282' },
     ]
 
     // Add your code here
+
+    function findContact(name, phonebook) {
+      let contactFound = "";
+      for(const contact of phonebook){
+        if(name === contact.name){
+          contactFound += contact.name + "'s number is " + contact.number;
+          break;
+        }
+      }
+
+      if(!contactFound) return (name + "'s number could not be found");
+      else return contactFound;
+    }
+  
+    para.textContent += findContact(name, phonebook);
 
     // Don't edit the code below here!
     const section = document.querySelector('section');

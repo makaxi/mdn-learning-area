@@ -42,6 +42,17 @@
 
     // Add your code here
 
+    let counter = 0;
+
+    for(let j = i; j > 1; j--){
+      if(isPrime(j) === true){
+        para.textContent += j + " ";
+        counter++;
+      }
+    }
+
+    console.log("There are " + counter + " prime numbers between 2 and " + i);
+
 
     // Don't edit the code below here!
     const section = document.querySelector('section');
