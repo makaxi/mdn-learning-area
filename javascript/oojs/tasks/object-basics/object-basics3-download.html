@@ -26,14 +26,41 @@
 
   </body>
   <script>
-    const cat = {
+    let cat = {
       name : 'Bertie',
       breed : 'Cymric',
       color : 'white',
       greeting: function() {
-        console.log('Meow!');
-      }
+        console.log('Hello, said ' + this.name + " the " + this.breed + ". I would like " + this.food.num + " " + this.food.item + "s.");
+      },
+      food : { num:2, item: "pizza"},
+
     }
+
+    cat.greeting();
+
+    let cat2 = Object.assign({}, cat);
+    cat2.name = "John";
+    cat2.color = "grey";
+    cat2.breed = "Sphynx ";
+
+    // the following lines are a shallow copy,
+    // meaning it will copy the address to cat.food
+    // and it will alter the original object's .food property
+    /*
+    cat2.food.num = 4;
+    cat2.food.item = "burger";
+    */
+
+    // the following line of code creates a new object
+    // that overrides the reference to the
+    // original cat.food's address
+    cat2.food = {num : 3, item : "hotdog"};
+
+    cat2.greeting();
+    cat.greeting();
+
+
   </script>
 
 </html>

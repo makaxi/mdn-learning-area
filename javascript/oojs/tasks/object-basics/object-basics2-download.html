@@ -29,7 +29,29 @@
     let bandInfo;
 
     // Add your code here
+    let band = {
+      name : "Queen",
+      nationality : "United Kingdom", 
+      genre : "rock",
+      members : 4, 
+      formed : 1970,
+      split : false,
+      albums : [
+        { name : "Queen",
+          year : 1973,
+        },
+        { name : "Queen II",
+          year : 1974
+        },
+        { name : "Sheer Heart Attack",
+          year : 1974,
+        }
+      ]
+    }
 
+    let biography = "Formed in " + band.formed + ", " + band.name + " has been representing the " + band.nationality + " with " + band.genre + " hits for over " + (2023 - band.formed) + " years. Their first album was released in " + band.albums[0].year + " eponymous titled " + band.albums[0]["name"] + ".";
+
+    bandInfo = biography;
 
     // Don't edit the code below here!
 
